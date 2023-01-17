@@ -1,0 +1,8 @@
+@import "styles/variables.scss";
+
+.wrapper {
+  display: flex;
+  background-color: $color-machine;
+  width: 600px;
+  padding: 10px;
+}
