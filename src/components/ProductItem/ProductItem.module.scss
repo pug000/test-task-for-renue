@@ -6,6 +6,21 @@
   align-items: center;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &:nth-child(even) {
+    border-left: 1px solid rgb(178, 176, 177, 0.6);
+  }
+
+  &:nth-child(odd) {
+    border-right: 1px solid rgb(178, 176, 177, 0.6);
+  }
+}
+
 .iconWrapper {
   width: 100px;
   padding: 5px 0;
