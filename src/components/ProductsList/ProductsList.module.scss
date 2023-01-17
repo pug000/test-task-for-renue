@@ -1,0 +1,8 @@
+@import "styles/variables.scss";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  border: 14px solid $color-border;
+  background-color: $color-black;
+}
