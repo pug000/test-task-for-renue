@@ -11,7 +11,11 @@ interface BuyProduct {
   payload: Product;
 }
 
-type MachineActions = IncrementBalance | BuyProduct;
+interface ClearStatus {
+  type: MachineActionTypes.CLEAR_STATUS;
+}
 
-export type { IncrementBalance, BuyProduct };
+type MachineActions = IncrementBalance | BuyProduct | ClearStatus;
+
+export type { IncrementBalance, BuyProduct, ClearStatus };
 export default MachineActions;

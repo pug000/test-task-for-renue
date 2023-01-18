@@ -16,6 +16,16 @@ const machineReducer: Reducer<MachineState, MachineActions> = (state, action) =>
       return buyProduct(state, action);
     }
 
+    case MachineActionTypes.CLEAR_STATUS: {
+      return {
+        ...state,
+        status: {
+          type: null,
+          text: '',
+        },
+      };
+    }
+
     default:
       return state;
   }
