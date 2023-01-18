@@ -1,16 +1,21 @@
 import { Reducer } from 'react';
 
 import { MachineState } from 'context/machineContext';
-import { MachineActions } from 'context/actionTypes/machineActionTypes';
+import MachineActions from 'context/actionTypes/machineActionTypes';
 
 import MachineActionTypes from 'ts/enums';
-import incrementBalance from 'context/actions/machineActions';
+import { incrementBalance, buyProduct } from 'context/actions/machineActions';
 
 const machineReducer: Reducer<MachineState, MachineActions> = (state, action) => {
   switch (action.type) {
     case MachineActionTypes.INCREMENT_BALANCE: {
       return incrementBalance(state, action);
     }
+
+    case MachineActionTypes.BUY_PRODUCT: {
+      return buyProduct(state, action);
+    }
+
     default:
       return state;
   }

@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 interface Product {
   id: number;
   price: number;
@@ -6,4 +5,9 @@ interface Product {
   icon: JSX.Element;
 }
 
-export type { Product };
+interface Status {
+  type: 'success' | 'error' | null;
+  text: string;
+}
+
+export type { Product, Status };
