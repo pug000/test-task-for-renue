@@ -1,6 +1,6 @@
-import { memo } from 'react';
+import { memo, useContext } from 'react';
 
-import products from 'utils/products';
+import MachineContext from 'context/machineContext';
 
 import ProductsList from 'components/ProductsList/ProductsList';
 import Control from 'components/Control/Control';
@@ -8,9 +8,11 @@ import Control from 'components/Control/Control';
 import styles from './Machine.module.scss';
 
 function Machine() {
+  const { machineState } = useContext(MachineContext);
+
   return (
     <div className={styles.wrapper}>
-      <ProductsList products={products} />
+      <ProductsList products={machineState.products} />
       <Control />
     </div>
   );

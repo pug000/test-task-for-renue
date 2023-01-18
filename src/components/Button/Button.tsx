@@ -7,17 +7,19 @@ interface ButtonProps {
   id: string;
   type?: 'button' | 'submit' | 'reset';
   children: React.ReactNode;
+  value?: string | number | readonly string[];
   disabled?: boolean;
   callback?: () => void;
 }
 
-function Button({ id, type, children, disabled, callback }: ButtonProps) {
+function Button({ id, type, children, value, disabled, callback }: ButtonProps) {
   return (
     <button
       id={id}
       type={type}
       className={styles.button}
       disabled={disabled}
+      value={value}
       onClick={callback}
     >
       {children}
@@ -28,6 +30,7 @@ function Button({ id, type, children, disabled, callback }: ButtonProps) {
 Button.defaultProps = {
   type: 'button',
   disabled: false,
+  value: undefined,
   callback: undefined,
 };
 
