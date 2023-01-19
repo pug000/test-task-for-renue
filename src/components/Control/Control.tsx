@@ -30,16 +30,19 @@ function Control() {
 
   return (
     <div className={styles.wrapper}>
-      <div
-        className={styles.coinContainer}
-        aria-hidden="true"
-        onClick={addBalanceOnClick}
-      >
-        {coins.map((coin) => (
-          <Button key={coin} id={String(coin)} value={coin}>
-            {coin} rub.
-          </Button>
-        ))}
+      <div className={styles.coinContainer}>
+        <h2 className={styles.title}>insert cash</h2>
+        <div
+          className={styles.coinWrapper}
+          aria-hidden="true"
+          onClick={addBalanceOnClick}
+        >
+          {coins.map((coin) => (
+            <Button key={coin} id={String(coin)} value={coin}>
+              {coin} rub.
+            </Button>
+          ))}
+        </div>
       </div>
       <div className={styles.container}>
         <p className={styles.text}>balance:</p>

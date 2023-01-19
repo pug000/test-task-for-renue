@@ -17,15 +17,18 @@ function Machine() {
   }, [dispatch]);
 
   return (
-    <div className={styles.wrapper}>
-      <ProductsList products={machineState.products} />
-      <Control />
-      <ModalNotification
-        status={machineState.status}
-        withdraw={machineState.withdraw}
-        closeModalOnClick={closeModalOnClick}
-      />
-    </div>
+    <section className={styles.section}>
+      <h1 className={styles.title}>Vending Machine</h1>
+      <div className={styles.wrapper}>
+        <ProductsList products={machineState.products} />
+        <Control />
+        <ModalNotification
+          status={machineState.status}
+          withdraw={machineState.withdraw}
+          closeModalOnClick={closeModalOnClick}
+        />
+      </div>
+    </section>
   );
 }
 

@@ -5,8 +5,8 @@ import MachineContext from 'context/machineContext';
 import ProductItem from 'components/ProductItem/ProductItem';
 
 import { Product } from 'ts/interfaces';
-
 import MachineActionTypes from 'ts/enums';
+
 import styles from './ProductsList.module.scss';
 
 interface ProductsListProps {
@@ -24,15 +24,17 @@ function ProductsList({ products }: ProductsListProps) {
   );
 
   return (
-    <div className={styles.wrapper}>
-      {products.map((product) => (
-        <ProductItem
-          key={product.id}
-          product={product}
-          balance={machineState.balance}
-          buyProductOnClick={buyProductOnClick}
-        />
-      ))}
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        {products.map((product) => (
+          <ProductItem
+            key={product.id}
+            product={product}
+            balance={machineState.balance}
+            buyProductOnClick={buyProductOnClick}
+          />
+        ))}
+      </div>
     </div>
   );
 }
