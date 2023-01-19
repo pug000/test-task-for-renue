@@ -4,7 +4,11 @@ import { MachineState } from 'context/machineContext';
 import MachineActions from 'context/actionTypes/machineActionTypes';
 
 import MachineActionTypes from 'ts/enums';
-import { incrementBalance, buyProduct } from 'context/actions/machineActions';
+import {
+  incrementBalance,
+  buyProduct,
+  withdrawMoney,
+} from 'context/actions/machineActions';
 
 const machineReducer: Reducer<MachineState, MachineActions> = (state, action) => {
   switch (action.type) {
@@ -16,9 +20,14 @@ const machineReducer: Reducer<MachineState, MachineActions> = (state, action) =>
       return buyProduct(state, action);
     }
 
+    case MachineActionTypes.WITHDRAW_MONEY: {
+      return withdrawMoney(state);
+    }
+
     case MachineActionTypes.CLEAR_STATUS: {
       return {
         ...state,
+        withdraw: {},
         status: {
           type: null,
           text: '',

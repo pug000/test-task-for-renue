@@ -15,7 +15,11 @@ interface ClearStatus {
   type: MachineActionTypes.CLEAR_STATUS;
 }
 
-type MachineActions = IncrementBalance | BuyProduct | ClearStatus;
+interface WithdrawMoney {
+  type: MachineActionTypes.WITHDRAW_MONEY;
+}
 
-export type { IncrementBalance, BuyProduct, ClearStatus };
+type MachineActions = IncrementBalance | BuyProduct | ClearStatus | WithdrawMoney;
+
+export type { IncrementBalance, BuyProduct, ClearStatus, WithdrawMoney };
 export default MachineActions;

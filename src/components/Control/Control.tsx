@@ -1,8 +1,8 @@
-import { memo, useContext } from 'react';
+import { memo, useCallback, useContext } from 'react';
 
 import MachineContext from 'context/machineContext';
 
-import coins from 'utils/constants';
+import { coins } from 'utils/constants';
 
 import Button from 'components/Button/Button';
 
@@ -24,6 +24,10 @@ function Control() {
     }
   };
 
+  const withdrawMoneyOnClick = useCallback(() => {
+    dispatch({ type: MachineActionTypes.WITHDRAW_MONEY });
+  }, [dispatch]);
+
   return (
     <div className={styles.wrapper}>
       <div
@@ -33,16 +37,22 @@ function Control() {
       >
         {coins.map((coin) => (
           <Button key={coin} id={String(coin)} value={coin}>
-            {coin}
+            {coin} rub.
           </Button>
         ))}
       </div>
       <div className={styles.container}>
         <p className={styles.text}>balance:</p>
-        <p className={styles.count}>{machineState.balance}</p>
+        <p className={styles.count}>{machineState.balance} rub.</p>
       </div>
       <div className={styles.container}>
-        <Button id="withdraw">withdraw</Button>
+        <Button
+          id="withdraw"
+          callback={withdrawMoneyOnClick}
+          disabled={!machineState.balance}
+        >
+          withdraw
+        </Button>
       </div>
     </div>
   );

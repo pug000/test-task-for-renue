@@ -9,6 +9,12 @@
   padding-left: 10px;
 }
 
+.title {
+  font-size: 24px;
+  color: $color-white;
+  align-self: center;
+}
+
 .coinContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -31,10 +37,12 @@
 .text {
   font-size: 24px;
   color: $color-white;
+  text-align: center;
 }
 
 .count {
   font-size: 20px;
   font-family: "Orbitron", sans-serif;
   color: $color-white;
+  text-align: center;
 }

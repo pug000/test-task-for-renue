@@ -1,4 +1,5 @@
 interface Product {
+  text: string;
   id: number;
   price: number;
   count: number;
@@ -10,4 +11,8 @@ interface Status {
   text: string;
 }
 
-export type { Product, Status };
+interface Withdraw {
+  [key: number | string]: number;
+}
+
+export type { Product, Status, Withdraw };

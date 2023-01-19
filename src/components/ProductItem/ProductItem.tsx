@@ -35,7 +35,7 @@ function ProductItem({ product, balance, buyProductOnClick }: ProductItemProps) 
         </div>
         <div className={styles.textWrapper}>
           <span>{product.count}</span>
-          <span>{product.price}</span>
+          <span>{product.price} rub.</span>
         </div>
       </div>
     </div>

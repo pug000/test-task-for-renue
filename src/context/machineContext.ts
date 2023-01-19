@@ -1,8 +1,9 @@
 import React, { createContext } from 'react';
 
 import products from 'utils/products';
+import { limits } from 'utils/constants';
 
-import { Product, Status } from 'ts/interfaces';
+import { Product, Status, Withdraw } from 'ts/interfaces';
 
 import MachineActions from './actionTypes/machineActionTypes';
 
@@ -10,6 +11,8 @@ interface MachineState {
   products: Product[];
   balance: number;
   status: Status;
+  limits: Record<number, number>;
+  withdraw: Withdraw;
 }
 
 const initialMachineState: MachineState = {
@@ -19,6 +22,8 @@ const initialMachineState: MachineState = {
     type: null,
     text: '',
   },
+  limits,
+  withdraw: {},
 };
 
 interface MachineStateContext {

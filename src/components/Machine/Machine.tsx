@@ -22,6 +22,7 @@ function Machine() {
       <Control />
       <ModalNotification
         status={machineState.status}
+        withdraw={machineState.withdraw}
         closeModalOnClick={closeModalOnClick}
       />
     </div>
