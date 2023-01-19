@@ -1,5 +1,6 @@
 {
-  "name": "test-task-for-renue",
+  "name": "vending-machine",
+  "homepage": "https://github.io/pug000/vending-machine/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
