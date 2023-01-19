@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pug000/vending-machine/static/css/main.3a96c3c8.css",
+    "main.js": "/pug000/vending-machine/static/js/main.2351f471.js",
+    "index.html": "/pug000/vending-machine/index.html",
+    "main.3a96c3c8.css.map": "/pug000/vending-machine/static/css/main.3a96c3c8.css.map",
+    "main.2351f471.js.map": "/pug000/vending-machine/static/js/main.2351f471.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a96c3c8.css",
+    "static/js/main.2351f471.js"
+  ]
+}
