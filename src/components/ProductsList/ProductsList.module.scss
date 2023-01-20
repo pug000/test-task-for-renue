@@ -1,0 +1,19 @@
+@import "styles/variables.scss";
+
+.container {
+  background-color: $color-black;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  border: 14px solid $color-border;
+  border-image: linear-gradient(99deg, rgb(243, 240, 246) 25%, rgb(115, 113, 113) 50%, rgb(243, 240, 246) 80%);
+  border-image-slice: 1;
+  background: linear-gradient(
+    49.8deg,
+    rgba(34, 34, 34, 1) 59%,
+    rgba(81, 81, 93, 0.2) 59.2%,
+    rgba(81, 81, 93, 0.6) 100%
+  );
+}
